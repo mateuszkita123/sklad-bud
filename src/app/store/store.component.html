@@ -1,0 +1,37 @@
+<div>
+  <h2>Dostawy cegieł:</h2>
+  <label>Ilość cegieł w dostawie:
+    <input #bricksAmount placeholder="ilość"/>
+  </label>
+  <label>Cena/szt:
+    <input #bricksPrice placeholder="cena/szt"/>
+  </label>
+  <button (click)="store(bricksAmount.value, bricksPrice.value); bricksAmount.value=''; bricksPrice.value=''; sellAmount.value=''">
+    Dodaj dostawę
+  </button>
+  <h2>Sprzedaż cegieł:</h2>
+  <label>Ilość cegieł do wydania:
+    <input #sellAmount placeholder="ilość"/>
+  </label>
+  <button (click)="pull(sellAmount.value); bricksAmount.value=''; bricksPrice.value=''; sellAmount.value=''">
+    Sprzedaj cegły
+  </button>
+</div>
+
+<div *ngIf="message.length > 0">
+  <h2>Informacje:</h2>
+  <p>{{message}}</p>
+</div>
+
+<div *ngIf="storeArr.length > 0; then areBricks; else noBricks"></div>
+
+<ng-template #areBricks>
+  <h2>Stan magazynowy:</h2>
+  <div *ngFor="let supply of storeArr">
+    <div class = "element">Partia {{supply.amount}} cegieł w cenie {{supply.price}} PLN/szt.</div>
+  </div>
+</ng-template>
+
+<ng-template #noBricks>
+  <p>Sład świeci pustkami... Dodaj kolejną dostawę cegieł.</p>
+</ng-template>
