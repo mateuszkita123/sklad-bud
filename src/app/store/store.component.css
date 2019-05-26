@@ -8,7 +8,7 @@ h2 {
 }
 
 label {
-    margin: 15px 15px;
+    margin-right: 20px;
 }
 
 button {
@@ -18,7 +18,6 @@ button {
     border-radius: 25px;
     width: auto;
     height: auto;
-    margin-left: 20px;
     font-weight: bold;
     text-transform: uppercase;
     background-color: #05A8AA;
@@ -43,6 +42,6 @@ button {
 }
 
 .element:hover {
-  background-color: #05A8AA;
-  color: #FFF;
+    background-color: #05A8AA;
+    color: #FFF;
 }
