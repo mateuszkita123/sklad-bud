@@ -51,9 +51,7 @@ export class StoreComponent implements OnInit {
               transactionValue += (this.storeArr[i].amount * this.storeArr[i].price);
               bricksAmount -= this.storeArr[i].amount;
               this.storeArr.splice(0, 1);
-              i = 0;
           } else { return; }
-          i++;
         }
     }
   }
