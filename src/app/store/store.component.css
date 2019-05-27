@@ -45,3 +45,7 @@ button {
     background-color: #05A8AA;
     color: #FFF;
 }
+
+.important {
+    font-weight: bold;
+}

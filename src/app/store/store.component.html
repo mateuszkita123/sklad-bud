@@ -20,7 +20,7 @@
 
 <div *ngIf="message.length > 0">
   <h2>Informacje:</h2>
-  <p>{{message}}</p>
+  <div class="important"><p>{{message}}</p></div>
 </div>
 
 <div *ngIf="storeArr.length > 0; then areBricks; else noBricks"></div>
@@ -33,5 +33,5 @@
 </ng-template>
 
 <ng-template #noBricks>
-  <p>Sład świeci pustkami... Dodaj kolejną dostawę cegieł.</p>
+  <div class="important"><p>Sład świeci pustkami... Dodaj kolejną dostawę cegieł.</p></div>
 </ng-template>
